@@ -13,3 +13,19 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ]
 )
+
+cc_library(
+    name = "grid",
+    srcs = ["grid.cc"],
+    hdrs = ["grid.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "grid_test",
+    srcs = ["grid_test.cc"],
+    deps = [
+        ":grid",
+        "@com_google_googletest//:gtest_main",
+    ]
+)
